@@ -19,9 +19,12 @@ const EDUCATION = [
 ];
 
 const Education = () => {
-  const educationContent = EDUCATION?.map((item) => {
+  const educationContent = EDUCATION?.map((item, index) => {
     return (
-      <div className="px-4 lg:px-6 lg:ml-4 py-4 lg:py-6 bg-secondary hover:scale-110 transition-all shadow-sm shadow-black/60 rounded-sm border border-black/40">
+      <div
+        key={index}
+        className="px-4 lg:px-6 lg:ml-4 py-4 lg:py-6 bg-secondary hover:scale-110 transition-all shadow-sm shadow-black/60 rounded-sm border border-black/40"
+      >
         <div className="">
           <span className="text-xs text-shades">
             {item?.from} &#8211; {item?.to}
@@ -36,7 +39,9 @@ const Education = () => {
 
   return (
     <section id={SECTION_NAME.EDUCATION} className="section lg:mx-6 mb-24">
-      <h2 className="tracking-wider text-lg font-bold mb-4 md:mb-8 lg:px-4">EDUCATION</h2>
+      <h2 className="tracking-wider text-lg font-bold mb-4 md:mb-8 lg:px-4">
+        EDUCATION
+      </h2>
       <div className="flex flex-col gap-1">
         {/* card one */}
         {educationContent}

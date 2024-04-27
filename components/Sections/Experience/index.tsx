@@ -16,9 +16,12 @@ const EXPERIENCES = [
 ];
 
 const Experience = () => {
-  const experiencesContent = EXPERIENCES?.map((item) => {
+  const experiencesContent = EXPERIENCES?.map((item, index) => {
     return (
-      <div className="flex flex-col md:flex-row md:gap-4 lg:p-4 lg:hover:bg-secondary lg:hover:scale-110 lg:hover:shadow-sm lg:hover:shadow-black/60 border border-transparent lg:hover:border-black/60 transition">
+      <div
+        key={index}
+        className="flex flex-col md:flex-row md:gap-4 lg:p-4 lg:hover:bg-secondary lg:hover:scale-110 lg:hover:shadow-sm lg:hover:shadow-black/60 border border-transparent lg:hover:border-black/60 transition"
+      >
         <div className="w-full md:w-[30%]">
           <span className="text-xs md:text-sm text-shades">
             {item?.from} &#8211; {item?.to}
@@ -35,7 +38,10 @@ const Experience = () => {
               <RedirectIcon className="w-2 h-2 fill-primary" />
             </span>
           </Link>
-          <Link href={item?.companyWebsite} className="text-lg font-medium mb-2">
+          <Link
+            href={item?.companyWebsite}
+            className="text-lg font-medium mb-2"
+          >
             {item?.title} &#183; {item?.companyName}
           </Link>
           <p className="text-sm text-shades">{item?.description}</p>
