@@ -50,22 +50,18 @@ const ProjectItem = ({ project }: Props) => {
         <Link
           href={link}
           target="_blank"
-          className="flex items-center gap-2 mb-1 hover:cursor-pointer"
+          className="flex items-center gap-2 hover:cursor-pointer"
         >
           <h4 className="md:text-lg font-medium transition-all group-hover:text-primary">
             <span>{name} </span>
           </h4>
           <span></span>
         </Link>
+        <p className="text-xs text-shades mb-2">Affiliated with Dellly</p>
 
         <p className="text-sm text-shades mb-2 text-left">{description}</p>
 
         <div className="text-sm overflow-hidden">
-          {/* <span>Technologies used: </span>
-          <span className="text-shades">
-            TypeScript, Next.js, Redux.js, Node.js, Express.js, PostgreSQL,
-            knex.js, Objection.js
-          </span> */}
           <div className="flex items-center gap-2 flex-wrap">
             {technologiesContent}
           </div>

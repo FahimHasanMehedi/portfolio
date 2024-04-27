@@ -25,7 +25,7 @@ const Header = () => {
       <div className="flex items-center gap-4">
         <div className="relative w-[48px] aspect-square rounded-full overflow-hidden border">
           <Image
-            src="/images/profile.webp"
+            src="/images/profile/profile.jpg"
             fill
             alt="Picture of Fahim Hasan Mehedi"
           />
