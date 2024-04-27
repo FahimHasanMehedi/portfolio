@@ -3,14 +3,16 @@ import React from "react";
 
 const EDUCATION = [
   {
-    degree: "Masters in Automotive Software Engineering",
+    program: "Automotive Software Engineering",
+    degree: "Master's",
     institution: "Technische Universität Chemnitz",
     location: "Chemnitz, Germany",
     from: "APR 2024",
     to: "PRESENT",
   },
   {
-    degree: "Bachelors in Computer Science",
+    program: "Computer Science",
+    degree: "Bachelor's",
     institution: "Brac University",
     location: "Dhaka, Bangladesh",
     from: "2017",
@@ -23,13 +25,14 @@ const Education = () => {
     return (
       <div
         key={index}
-        className="px-4 lg:px-6 lg:ml-4 py-4 lg:py-6 bg-secondary hover:scale-110 transition-all shadow-sm shadow-black/60 rounded-sm border border-black/40"
+        className="px-4 lg:px-6 lg:ml-4 py-4 lg:py-6 bg-secondary lg:hover:scale-110 transition-all shadow-sm shadow-black/60 rounded-sm border border-black/40"
       >
         <div className="">
           <span className="text-xs text-shades">
             {item?.from} &#8211; {item?.to}
           </span>
-          <h3 className="text-base md:text-lg font-medium">{item?.degree}</h3>
+          <h3 className="text-base md:text-lg font-medium">{item?.program}</h3>
+          <p className="text-xs text-shades">{item?.degree}</p>
           <p className="text-sm text-accent">{item?.institution}</p>
           <p className="text-xs text-shades">{item?.location}</p>
         </div>

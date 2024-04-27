@@ -16,7 +16,7 @@ export default function Home() {
           <Experience />
           <TechnlogyStack />
           <Education />
-          <footer className="text-[10px]">
+          <footer className="text-[10px] text-end">
             <p className="">
               Created by,{" "}
               <span className="text-[10px] text-primary font-medium">

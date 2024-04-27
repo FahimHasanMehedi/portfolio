@@ -4,6 +4,7 @@ import Image from "next/image";
 import Github from "../common/icons/Github";
 import RedirectIcon from "../common/icons/RedirectIcon";
 import Linkedin from "../common/icons/Linkedin";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -30,7 +31,10 @@ const Header = () => {
             alt="Picture of Fahim Hasan Mehedi"
           />
         </div>
-        <div className="flex items-center">
+        <Link
+          href="https://github.com/FahimHasanMehedi"
+          className="flex items-center hover:cursor-pointer"
+        >
           <span className="mr-3">
             <Github className="w-5 h-5 text-white fill-white" />
           </span>
@@ -38,9 +42,12 @@ const Header = () => {
           <span>
             <RedirectIcon className="w-[10px] h-[10px] text-white fill-white" />
           </span>
-        </div>
+        </Link>
 
-        <div className="flex items-center">
+        <Link
+          href="https://www.linkedin.com/in/fahimhasanmehedi/"
+          className="flex items-center hover:cursor-pointer"
+        >
           <span className="mr-3">
             <Linkedin className="w-5 h-5 text-white fill-white" />
           </span>
@@ -48,7 +55,7 @@ const Header = () => {
           <span>
             <RedirectIcon className="w-[10px] h-[10px] text-white fill-white" />
           </span>
-        </div>
+        </Link>
       </div>
     </header>
   );

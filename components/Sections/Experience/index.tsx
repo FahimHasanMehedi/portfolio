@@ -40,7 +40,7 @@ const Experience = () => {
           </Link>
           <Link
             href={item?.companyWebsite}
-            className="text-lg font-medium mb-2"
+            className="text-lg font-medium mb-2 hover:text-primary"
           >
             {item?.title} &#183; {item?.companyName}
           </Link>
