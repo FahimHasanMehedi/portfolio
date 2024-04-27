@@ -8,10 +8,16 @@ export const metadata: Metadata = {
   title: "Fahim Hasan Mehedi",
   description:
     "Hi there! I'm a full-stack developer with a knack for turning ideas into functional software. I enjoy the challenge of building both the front-end and back-end components that power modern applications.",
+
+  metadataBase: new URL("https://fahim-mehedi.me"),
+
   openGraph: {
     title: "Fahim Hasan Mehedi",
     description:
       "Hi there! I'm a full-stack developer with a knack for turning ideas into functional software. I enjoy the challenge of building both the front-end and back-end components that power modern applications.",
+    images: "/images/seo-image.png",
+    url: "https://fahim-mehedi.me",
+    type: "website",
   },
 };
 
