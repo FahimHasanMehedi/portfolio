@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: "Fahim Hasan Mehedi",
   description:
     "Hi there! I'm a full-stack developer with a knack for turning ideas into functional software. I enjoy the challenge of building both the front-end and back-end components that power modern applications.",
+  openGraph: {
+    title: "Fahim Hasan Mehedi",
+    description:
+      "Hi there! I'm a full-stack developer with a knack for turning ideas into functional software. I enjoy the challenge of building both the front-end and back-end components that power modern applications.",
+  },
 };
 
 export default function RootLayout({
