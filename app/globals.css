@@ -3,31 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+   
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background-color: #12171C;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.glass-effect:hover {
+  /* Adjust background color to enhance the glass effect */
+  /* Add layered box shadows for hover effect */
+  box-shadow:
+    0px 0px 0px rgba(0, 0, 0, 0), /* Initial transparent shadow */
+    0px 4px 12px rgba(18, 23, 28, 0.1), /* First layer shadow with website's background color */
+    0px 8px 24px rgba(18, 23, 28, 0.2), /* Second layer shadow with website's background color */
+    0px 16px 48px rgba(56, 189, 248, 0.4); /* Third layer shadow with card's background color */
 }
