@@ -21,16 +21,15 @@ const Navigation = () => {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is in viewport
+      { threshold: 0.5, rootMargin: "-100px" } 
     );
 
-    // Observe each section
     document.querySelectorAll(".section").forEach((section) => {
       observer.observe(section);
     });
 
     return () => {
-      observer.disconnect(); // Clean up observer
+      observer.disconnect();
     };
   }, [lastVisibleSection]);
 
@@ -39,7 +38,10 @@ const Navigation = () => {
 
     const targetPosition = document.getElementById(sectionName);
 
-    targetPosition?.scrollIntoView();
+    if (targetPosition) {
+      const topOffset = targetPosition.offsetTop - window.innerHeight / 2;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
   };
 
   return (
