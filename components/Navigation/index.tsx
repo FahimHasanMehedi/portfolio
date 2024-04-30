@@ -4,7 +4,9 @@ import React, { useEffect, useState } from "react";
 import { SECTION_NAME } from "../common/common.types";
 
 const Navigation = () => {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(
+    SECTION_NAME.PROJECTS
+  );
   const [lastVisibleSection, setLastVisibleSection] = useState<string | null>(
     null
   );
@@ -21,7 +23,7 @@ const Navigation = () => {
           }
         });
       },
-      { threshold: 0.5, rootMargin: "-100px" } 
+      { threshold: 0.5, rootMargin: "-200px" }
     );
 
     document.querySelectorAll(".section").forEach((section) => {
@@ -34,13 +36,15 @@ const Navigation = () => {
   }, [lastVisibleSection]);
 
   const handleClick = (sectionName: string) => {
-    setActiveSection(sectionName);
-
     const targetPosition = document.getElementById(sectionName);
 
     if (targetPosition) {
       const topOffset = targetPosition.offsetTop - window.innerHeight / 2;
       window.scrollTo({ top: topOffset, behavior: "smooth" });
+
+      setTimeout(() => {
+        setActiveSection(sectionName);
+      }, 500);
     }
   };
 

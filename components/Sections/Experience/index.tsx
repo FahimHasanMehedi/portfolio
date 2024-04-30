@@ -20,7 +20,7 @@ const Experience = () => {
     return (
       <div
         key={index}
-        className="flex flex-col md:flex-row md:gap-4 lg:p-4 lg:hover:bg-secondary lg:hover:scale-110 lg:hover:shadow-sm lg:hover:shadow-black/60 border border-transparent lg:hover:border-black/60 transition"
+        className="flex flex-col md:flex-row md:gap-4 lg:p-4 lg:hover:bg-secondary lg:hover:scale-110 lg:hover:shadow-sm lg:hover:shadow-black/60 border border-transparent lg:hover:border-black/60 transition group cursor-default"
       >
         <div className="w-full md:w-[30%]">
           <span className="text-xs md:text-sm text-shades">
@@ -40,7 +40,7 @@ const Experience = () => {
           </Link>
           <Link
             href={item?.companyWebsite}
-            className="text-lg font-medium mb-2 hover:text-primary"
+            className="text-lg font-medium mb-2 group-hover:text-primary"
           >
             {item?.title} &#183; {item?.companyName}
           </Link>
